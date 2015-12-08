@@ -89,6 +89,7 @@
     [self.view addSubview:_toolbar];
     
     [self setUpStaticConstraints];
+	[self.view needsUpdateConstraints];
 }
 
 - (void)updateLayoutMargins {
@@ -120,7 +121,7 @@
                                                         attribute:NSLayoutAttributeNotAnAttribute
                                                        multiplier:1.0
                                                          constant:ORKGetMetricForWindow(ORKScreenMetricToolbarHeight, self.view.window)]];
-    
+	
     [NSLayoutConstraint activateConstraints:constraints];
 }
 
